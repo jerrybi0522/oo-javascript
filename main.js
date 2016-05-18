@@ -32,14 +32,15 @@ read["is-square"]
 read.dot
 
 // Storing and Using Methods
-var use_method = {
-	string: "He",
-	stringception: function(){
-		return string + " is a spy";
+var Use_method = function(){
+	this.string = "He"
+	this.stringception = function(){
+		return this.string + " is a spy";
 	}
 }
 
-use_method.stringception()
+var new_method = new Use_method
+new_method.stringception()
 
 // Prototypes- allows you to modify object and instancs after they have been defined intially
 function Initial(string, integer){
@@ -123,8 +124,8 @@ var Album = function(){
 	}
 }
 
-var pic1 = new Photo(Mom, NYC);
-var pic2 = new Photo(Sis, Paris);
+var pic1 = new Photo("Mom", "NYC");
+var pic2 = new Photo("Sis", "Paris");
 var family = new Album();
 
 family.addPhoto(pic1);
